@@ -1,3 +1,6 @@
-# api-node-todolist
+# To Do List - Back End
 
-Para rodar a api localmente, digite no terminal "yarn dev"
+Para rodar o back end, execute os seguintes scripts no terminal:
+
+### yarn install
+### yarn dev
