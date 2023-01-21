@@ -1,6 +1,11 @@
-import { tasks } from "../../database";
+import { Task } from "../../entities/task.entity";
+import { AppDataSorce } from "../../data-source";
 
-const taskListService = () => {
+const taskListService = async () => {
+    const taskRepository = AppDataSorce.getRepository(Task)
+
+    const tasks = taskRepository.find()
+
     return tasks
 }
 

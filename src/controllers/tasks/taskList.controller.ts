@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import taskListService from "../../services/tasks/taskList.service";
 
-const taskListController = (req: Request, res: Response) => {
+const taskListController = async (req: Request, res: Response) => {
     try {
-        const tasks = taskListService()
+        const tasks = await taskListService()
 
         return res.send(tasks)
     } catch (err) {
