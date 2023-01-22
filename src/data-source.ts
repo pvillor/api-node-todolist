@@ -3,7 +3,7 @@ import { Task } from "./entities/task.entity";
 
 require('dotenv').config()
 
-export const AppDataSorce = new DataSource({
+export const AppDataSource = new DataSource({
     type: 'postgres',
     host: 'localhost',
     port: 5432,
@@ -18,4 +18,4 @@ export const AppDataSorce = new DataSource({
     migrations: ['src/migrations/*.ts']
 })
 
-AppDataSorce.initialize().then(() => console.log('DataSource initialized')).catch((err) => console.error('Error during DataSource initialization', err))
+AppDataSource.initialize().then(() => console.log('DataSource initialized')).catch((err) => console.error('Error during DataSource initialization', err))

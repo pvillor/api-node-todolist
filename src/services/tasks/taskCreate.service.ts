@@ -1,10 +1,9 @@
 import { Task } from "../../entities/task.entity";
-import { ITaskCreate, ITask } from "../../interfaces/tasks";
-import { v4 as uuidv4 } from 'uuid'
-import { AppDataSorce } from "../../data-source";
+import { ITaskCreate } from "../../interfaces/tasks";
+import { AppDataSource } from "../../data-source";
 
 const taskCreateService = async ({ description }: ITaskCreate) => {
-    const taskRepository = AppDataSorce.getRepository(Task)
+    const taskRepository = AppDataSource.getRepository(Task)
     const tasks = await taskRepository.find()
 
     const descriptionAlreadyExists = tasks.find(task => task.description === description)

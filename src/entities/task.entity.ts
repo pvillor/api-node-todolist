@@ -9,6 +9,9 @@ export class Task {
     @Column()
     description: string
 
+    @Column()
+    completed: boolean
+
     constructor(){
         if(!this.id) {
             this.id = uuid()
