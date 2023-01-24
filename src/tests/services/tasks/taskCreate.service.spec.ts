@@ -22,8 +22,6 @@ describe('Create a task', () => {
 
         const newTask = await taskCreateService(taskData)
 
-        console.log(newTask)
-
         expect(newTask.description).toEqual('description')
         expect(newTask.completed).toEqual(false)
     })
