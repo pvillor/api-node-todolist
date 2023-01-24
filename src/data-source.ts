@@ -1,5 +1,4 @@
 import { DataSource } from "typeorm";
-import { Task } from "./entities/task.entity";
 
 require('dotenv').config()
 
@@ -7,7 +6,7 @@ export const AppDataSource =
     process.env.NODE_ENV === 'test' ? new DataSource({
         type: 'sqlite',
         database: ':memory:',
-        entities: [Task],
+        entities: ['src/entities/*.ts'],
         synchronize: true,
     }) : new DataSource({
         type: 'postgres',
@@ -20,11 +19,6 @@ export const AppDataSource =
 
         synchronize: false,
         logging: true,
-        entities: [Task],
+        entities: ['src/entities/*.ts'],
         migrations: ['src/migrations/*.ts']
     })
-
-
-
-
-
