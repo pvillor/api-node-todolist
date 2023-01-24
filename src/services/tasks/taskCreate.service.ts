@@ -12,6 +12,13 @@ const taskCreateService = async ({ description }: ITaskCreate) => {
         throw new Error('Task already exists')
     }
 
+    const arrayDescription = description.split(' ')
+        const validatedDescription = arrayDescription.join('')
+
+        if(description === '' || validatedDescription.length === 0) {
+            throw new Error('Task cannot be blank')
+        }
+
     const task = new Task()
     task.description = description
     task.completed = false
