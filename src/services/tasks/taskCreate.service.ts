@@ -14,6 +14,7 @@ const taskCreateService = async ({ description }: ITaskCreate) => {
 
     const task = new Task()
     task.description = description
+    task.completed = false
 
     taskRepository.create(task)
     await taskRepository.save(task)

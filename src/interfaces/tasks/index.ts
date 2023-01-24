@@ -6,5 +6,4 @@ export interface ITask {
 
 export interface ITaskCreate {
     description: string;
-    completed: boolean;
 }

@@ -10,7 +10,7 @@ import taskUpdateService from '../../services/tasks/taskUpdate.service'
 
             const task = await taskUpdateService(id, description, completed)
 
-            return res.status(200).json({message: "Task updated!", task: task})
+            return res.status(200).json({task: task})
 
         } catch (err) {
 
