@@ -10,4 +10,6 @@ app.use(cors())
 
 app.use(routes)
 
-app.listen(8000)
+// app.listen(8000)
+
+export default app
